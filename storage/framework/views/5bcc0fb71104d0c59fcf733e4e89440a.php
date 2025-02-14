@@ -117,6 +117,24 @@ unset($__defined_vars); ?>
             </script>
         <?php else: ?>
             <script>
+<<<<<<< HEAD
+                const loadDarkMode = () => {
+                    var theme = localStorage.getItem('theme') ?? <?php echo \Illuminate\Support\Js::from(filament()->getDefaultThemeMode()->value)->toHtml() ?>
+
+                    if (
+                        theme === 'dark' ||
+                        (theme === 'system' &&
+                            window.matchMedia('(prefers-color-scheme: dark)')
+                                .matches)
+                    ) {
+                        document.documentElement.classList.add('dark')
+                    }
+                }
+
+                loadDarkMode()
+
+                document.addEventListener('livewire:navigated', loadDarkMode)
+=======
                 const theme = localStorage.getItem('theme') ?? <?php echo \Illuminate\Support\Js::from(filament()->getDefaultThemeMode()->value)->toHtml() ?>
 
                 if (
@@ -127,6 +145,7 @@ unset($__defined_vars); ?>
                 ) {
                     document.documentElement.classList.add('dark')
                 }
+>>>>>>> 6a3c62d2799759ac67d82dba6f8495e0ff87e216
             </script>
         <?php endif; ?>
 
@@ -180,6 +199,15 @@ if (isset($__slots)) unset($__slots);
             </script>
         <?php endif; ?>
 
+<<<<<<< HEAD
+        <?php if(filament()->hasDarkMode() && (! filament()->hasDarkModeForced())): ?>
+            <script>
+                loadDarkMode()
+            </script>
+        <?php endif; ?>
+
+=======
+>>>>>>> 6a3c62d2799759ac67d82dba6f8495e0ff87e216
         <?php echo $__env->yieldPushContent('scripts'); ?>
 
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SCRIPTS_AFTER, scopes: $livewire->getRenderHookScopes())); ?>
