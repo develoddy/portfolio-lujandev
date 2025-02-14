@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+=======
+@import '/vendor/filament/filament/resources/css/theme.css';
+>>>>>>> 6a3c62d2799759ac67d82dba6f8495e0ff87e216
+
+@config 'tailwind.config.js';
