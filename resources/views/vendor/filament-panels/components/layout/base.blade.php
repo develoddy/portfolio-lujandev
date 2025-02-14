@@ -81,6 +81,7 @@
             </script>
         @else
             <script>
+<<<<<<< HEAD
                 const loadDarkMode = () => {
                     var theme = localStorage.getItem('theme') ?? @js(filament()->getDefaultThemeMode()->value)
 
@@ -97,6 +98,18 @@
                 loadDarkMode()
 
                 document.addEventListener('livewire:navigated', loadDarkMode)
+=======
+                const theme = localStorage.getItem('theme') ?? @js(filament()->getDefaultThemeMode()->value)
+
+                if (
+                    theme === 'dark' ||
+                    (theme === 'system' &&
+                        window.matchMedia('(prefers-color-scheme: dark)')
+                            .matches)
+                ) {
+                    document.documentElement.classList.add('dark')
+                }
+>>>>>>> 6a3c62d2799759ac67d82dba6f8495e0ff87e216
             </script>
         @endif
 
@@ -130,12 +143,15 @@
             </script>
         @endif
 
+<<<<<<< HEAD
         @if (filament()->hasDarkMode() && (! filament()->hasDarkModeForced()))
             <script>
                 loadDarkMode()
             </script>
         @endif
 
+=======
+>>>>>>> 6a3c62d2799759ac67d82dba6f8495e0ff87e216
         @stack('scripts')
 
         {{ \Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SCRIPTS_AFTER, scopes: $livewire->getRenderHookScopes()) }}
