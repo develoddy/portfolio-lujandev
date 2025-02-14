@@ -14,6 +14,7 @@
 
         <!-- Scripts -->
         
+        
         <?php echo app('Illuminate\Foundation\Vite')(['resources/scss/main.scss', 'resources/js/app.js']); ?>
     </head>
     <body>
