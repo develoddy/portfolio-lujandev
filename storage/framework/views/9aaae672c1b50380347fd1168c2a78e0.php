@@ -21,7 +21,7 @@
                     extract($args, EXTR_SKIP);
                     ob_start(); ?>
         
-    <?php if($logo instanceof \Illuminate\Contracts\Support\Htmlable): ?>
+    <!--[if BLOCK]><![endif]--><?php if($logo instanceof \Illuminate\Contracts\Support\Htmlable): ?>
         <div
             <?php echo e($attributes
                     ->class([$getLogoClasses($isDarkMode)])
@@ -51,7 +51,7 @@
             <?php echo e($brandName); ?>
 
         </div>
-    <?php endif; ?>
+    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 
             <?php return new \Illuminate\Support\HtmlString(ob_get_clean()); };
                 })(get_defined_vars()); ?>
@@ -60,8 +60,13 @@
 <?php echo e($content($brandLogo)); ?>
 
 
-<?php if($hasDarkModeBrandLogo): ?>
+<!--[if BLOCK]><![endif]--><?php if($hasDarkModeBrandLogo): ?>
     <?php echo e($content($darkModeBrandLogo, isDarkMode: true)); ?>
 
+<<<<<<< HEAD:storage/framework/views/9aaae672c1b50380347fd1168c2a78e0.php
 <?php endif; ?>
 <?php /**PATH /home/lujandev/portfolio-lujandev/resources/views/vendor/filament-panels/components/logo.blade.php ENDPATH**/ ?>
+=======
+<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+<?php /**PATH C:\laragon\www\portfolio-lujandev\resources\views/vendor/filament-panels/components/logo.blade.php ENDPATH**/ ?>
+>>>>>>> 1d227a2d9538126c3b28bedafe4788cc97ce5c62:storage/framework/views/aa9897b8f2036829ae36186675a06ed4.php

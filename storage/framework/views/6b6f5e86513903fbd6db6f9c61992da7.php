@@ -174,4 +174,4 @@
         </div>
     </body>
 </html>
-<?php /**PATH /home/lujandev/portfolio-lujandev/resources/views/welcome.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\portfolio-lujandev\resources\views/welcome.blade.php ENDPATH**/ ?>
