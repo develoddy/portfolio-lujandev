@@ -57,6 +57,15 @@ return [
 
     'assets_path' => null,
 
+
+    'auth' => [
+        'guard' => 'web', // O el guard que estés usando
+        'pages' => [
+            'login' => \Filament\Pages\Auth\Login::class, 
+        ],
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Cache Path
