@@ -1,1 +1,0 @@
-<?php /**PATH /home/lujandev/portfolio-lujandev/resources/views/partials/navigation.blade.php ENDPATH**/ ?>
