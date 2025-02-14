@@ -196,7 +196,7 @@ unset($__defined_vars); ?>
                     'wire:target' => ($hasLoadingIndicator && $loadingIndicatorTarget) ? $loadingIndicatorTarget : null,
                 ], escape: false)
                 ->merge([
-                    'title' => $label,
+                    'title' => $hasTooltip ? null : $label,
                 ], escape: true)
                 ->class([$buttonClasses])
                 ->style([$buttonStyles])); ?>
@@ -331,7 +331,7 @@ unset($__defined_vars); ?>
         <?php endif; ?>
         <?php echo e($attributes
                 ->merge([
-                    'title' => $label,
+                    'title' => $hasTooltip ? null : $label,
                 ], escape: true)
                 ->class([$buttonClasses])
                 ->style([$buttonStyles])); ?>
